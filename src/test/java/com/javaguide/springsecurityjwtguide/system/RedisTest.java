@@ -26,6 +26,7 @@ public class RedisTest extends TestCase {
     @Test
     public void redis() {
         stringRedisTemplate.opsForValue().set("key", "value");
+        System.out.println(stringRedisTemplate.opsForValue().get("key"));
         assertEquals(stringRedisTemplate.opsForValue().get("key"), "value");
     }
 }
