@@ -6,10 +6,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
 
-/**
- * @author shuang.kou
- * @description JWT用户对象
- */
+
 public class JwtUser implements UserDetails {
 
     private Long id;
