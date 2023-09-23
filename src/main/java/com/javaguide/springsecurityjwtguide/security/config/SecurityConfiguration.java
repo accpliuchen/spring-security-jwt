@@ -34,7 +34,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     }
 
     /**
-     * 密码编码器
+     * crypt password encode
      */
     @Bean
     public BCryptPasswordEncoder bCryptPasswordEncoder() {
