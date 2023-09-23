@@ -9,6 +9,7 @@ import io.swagger.annotations.ApiOperation;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -30,6 +31,9 @@ import javax.validation.Valid;
 public class UserController {
 
     private final UserService userService;
+
+    @Autowired
+    private RedisTemplate<String, String> redisTemplate;
 
     @PostMapping("/sign-up")
     @ApiOperation("用户注册")
