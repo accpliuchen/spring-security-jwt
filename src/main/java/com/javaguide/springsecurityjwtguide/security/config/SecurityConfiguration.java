@@ -45,7 +45,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.cors(withDefaults())
-                // 禁用 CSRF
+                // disable CSRF
                 .csrf().disable()
                 .authorizeRequests()
                 // 指定的接口直接放行

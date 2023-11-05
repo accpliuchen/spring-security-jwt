@@ -19,7 +19,7 @@ public class JwtUser implements UserDetails {
     }
 
     /**
-     * 通过 user 对象创建jwtUser
+     * by user, create JWTUser
      */
     public JwtUser(User user) {
         id = user.getId();
